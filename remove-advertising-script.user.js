@@ -74,3 +74,4 @@
     setInterval(clearAds, 1e3)
 })(jQuery);
 jQuery = $;
+
