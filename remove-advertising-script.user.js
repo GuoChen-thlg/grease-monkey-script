@@ -72,5 +72,9 @@
         }
     }
     setInterval(clearAds, 1e3)
+<<<<<<< HEAD
 })(jQuery);
 jQuery = $;
+=======
+})(jQuery);
+>>>>>>> 613b13573b9bafe5a81a9bc78c5cd3d53ef98094
