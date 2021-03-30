@@ -22,7 +22,7 @@
 // ==/UserScript==
 (function ($) {
     'use strict';
-    jQuery.noConflict();
+    jQuery.noConflict(true);
     function clearEl (c_select, p_select) {
         if (p_select) {
             $(c_select.join(',')).closest(p_select.join(',')).each((i, el) => {
@@ -73,4 +73,4 @@
     }
     setInterval(clearAds, 1e3)
 })(jQuery);
-jQuery = $;
+
