@@ -2,7 +2,7 @@
 // @name                移除广告
 // @name:CN:zh          移除广告
 // @namespace           https://github.com/GuoChen-thlg
-// @version             0.1.0
+// @version             0.1.1
 // @description         移除网页中的广告
 // @homepage            https://greasyfork.org/zh-CN/users/750817-thlg
 // @author              THLG
@@ -20,7 +20,7 @@
 // @grant               none
 // @run-at              document-end
 // ==/UserScript==
-(function () {
+(function ($) {
     'use strict';
     function clearEl (c_select, p_select) {
         if (p_select) {
@@ -71,4 +71,4 @@
         }
     }
     setInterval(clearAds, 1e3)
-})();
+})(jQuery);
