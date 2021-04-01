@@ -2,7 +2,7 @@
 // @name                移除广告
 // @name:CN:zh          移除广告
 // @namespace           https://github.com/GuoChen-thlg
-// @version             0.1.1
+// @version             0.1.2
 // @description         移除网页中的广告
 // @homepage            https://greasyfork.org/zh-CN/users/750817-thlg
 // @author              THLG
@@ -42,6 +42,12 @@
                 "[cmatchid]",
                 ".result",
                 "[data-click]",
+            ])
+        }
+        if (/\w{4,5}:\/\/jingyan.baidu.com\/s.*/.test(location.href)) {
+            clearEl([
+                "#task-panel-wrap",
+                "#fresh-share-exp-e"
             ])
         }
         if (/\w{4,5}:\/\/wenku.baidu.com\/s.*/.test(location.href)) {
