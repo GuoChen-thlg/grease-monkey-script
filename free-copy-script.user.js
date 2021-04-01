@@ -2,7 +2,7 @@
 // @name                Free Copy
 // @name:CN:zh          自由复制
 // @namespace           https://github.com/GuoChen-thlg
-// @version             0.1.0
+// @version             0.1.1
 // @description         支持复制受限网站的文本内容
 // @author              THLG
 // @supportURL          gc.thlg@gmail.com
@@ -12,7 +12,7 @@
 // @contributionURL     https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CK755FJ9PSBZ8
 // @contributionAmount  1
 // @match               *://wenku.baidu.com/*
-// @match               *
+// @match               *://*.360doc.com/*
 // @grant               none
 // @run-at              document-end
 // ==/UserScript==
@@ -24,7 +24,7 @@
             e.stopImmediatePropagation()
         }
     }
-    [
+    ['cut',
         'copy',
         'keydown',
         'keyup',
