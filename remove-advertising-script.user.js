@@ -2,7 +2,7 @@
 // @name                移除广告
 // @name:CN:zh          移除广告
 // @namespace           https://github.com/GuoChen-thlg
-// @version             0.1.2
+// @version             0.1.3
 // @description         移除网页中的广告
 // @homepage            https://greasyfork.org/zh-CN/users/750817-thlg
 // @author              THLG
@@ -75,6 +75,11 @@
             clearEl([
                 "[class*='ad-']",
             ])
+        }
+        if (/\w{4,5}:\/\/.*iqiyi\.com.*/.test(location.href)) {
+            if ($('.bottom-public').is(':visible') && $('.bottom-public a.skippable-after') && $('.bottom-public a.skippable-after').length > 0) {
+                $('.bottom-public a.skippable-after')[0]['click']();
+            } 
         }
     }
     setInterval(clearAds, 1e3)
