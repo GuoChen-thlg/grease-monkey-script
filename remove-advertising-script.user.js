@@ -17,6 +17,7 @@
 // @match               *://*.csdn.net/*
 // @match               *://csdn.net/*
 // @match               *://segmentfault.com/*
+// @match               *://*.iqiyi.com/*
 // @grant               none
 // @run-at              document-end
 // ==/UserScript==
