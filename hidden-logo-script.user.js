@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                隐藏徽标
 // @namespace           https://github.com/GuoChen-thlg
-// @version             0.2.1
+// @version             0.2.2
 // @description         隐藏视频播放时出现的网站LOGO (支持：腾讯，爱奇艺，优酷，PP)
 // @author              THLG
 // @supportURL          gc.thlg@gmail.com
@@ -21,7 +21,8 @@
 (function () {
     'use strict';
     var style = [
-        "[id='mod_player'] [data-role='txp-ui-watermark-mod']",
+        "[data-role='txp-ui-watermark-mod']",
+        ".txp-watermark",
         ".iqp-player [data-player-hook='logo'].iqp-logo-box",
         "#ykPlayer .youku-layer-logo",
         ".w-video #p-mark",
