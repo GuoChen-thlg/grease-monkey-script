@@ -2,7 +2,7 @@
 // @name                移除广告
 // @name:CN:zh          移除广告
 // @namespace           https://github.com/GuoChen-thlg
-// @version             0.1.3
+// @version             0.1.4
 // @description         移除网页中的广告
 // @homepage            https://greasyfork.org/zh-CN/users/750817-thlg
 // @author              THLG
