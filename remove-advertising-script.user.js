@@ -78,11 +78,17 @@
             ])
         }
         if (/\w{4,5}:\/\/.*iqiyi\.com.*/.test(location.href)) {
+            clearEl([
+                "[adid]"
+            ])
             if ($('.bottom-public').is(':visible') && $('.bottom-public a.skippable-after') && $('.bottom-public a.skippable-after').length > 0) {
                 $('.bottom-public a.skippable-after')[0]['click']();
-            } 
+            }
+            if ($('.cupid-pause-max-close-btn').length > 0) {
+                $('.cupid-pause-max-close-btn')[0]['click']();
+            }
         }
     }
-    setInterval(clearAds, 1e3)
+    setInterval(clearAds, 20)
 })(jQuery);
 
