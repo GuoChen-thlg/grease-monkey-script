@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                自动跳转
 // @namespace           https://github.com/GuoChen-thlg
-// @version             1.0.3
+// @version             1.0.4
 // @description         自动跳转链接 懒人小工具
 // @author              THLG
 // @supportURL          gc.thlg@gmail.com
@@ -22,7 +22,9 @@
     // juejin.cn
     const url = new URL(location.href)
     if(url.host === 'link.juejin.cn' || url.host === 'link.csdn.net' || url.host === 'link.zhihu.com' || url.host === 'gitee.com'){
-        location.href = decodeURIComponent(url.searchParams.get('target'))
+        if(url.searchParams.get('target')){
+            location.href = decodeURIComponent(url.searchParams.get('target'))
+        }
     }
     // code
 })();
