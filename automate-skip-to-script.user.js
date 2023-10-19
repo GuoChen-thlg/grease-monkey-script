@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                自动跳转
 // @namespace           https://github.com/GuoChen-thlg
-// @version             1.0.2
+// @version             1.0.3
 // @description         自动跳转链接 懒人小工具
 // @author              THLG
 // @supportURL          gc.thlg@gmail.com
