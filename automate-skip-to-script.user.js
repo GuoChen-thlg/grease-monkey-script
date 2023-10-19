@@ -12,6 +12,7 @@
 // @contributionAmount  1
 // @match               *://link.juejin.cn/*
 // @match               *://link.csdn.net/*
+// @match               *://link.zhihu.com/*
 // @match               *://gitee.com/*
 // @grant               none
 // @run-at              document-end
@@ -20,7 +21,7 @@
     'use strict';
     // juejin.cn
     const url = new URL(location.href)
-    if(url.host === 'link.juejin.cn' || url.host === 'link.csdn.net' || url.host === 'gitee.com'){
+    if(url.host === 'link.juejin.cn' || url.host === 'link.csdn.net' || url.host === 'link.zhihu.com' || url.host === 'gitee.com'){
         location.href = decodeURIComponent(url.searchParams.get('target'))
     }
     // code
