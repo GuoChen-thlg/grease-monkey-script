@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                自动跳转
 // @namespace           https://github.com/GuoChen-thlg
-// @version             1.0.4
+// @version             1.0.5
 // @description         自动跳转链接 懒人小工具
 // @author              THLG
 // @supportURL          gc.thlg@gmail.com
@@ -14,17 +14,30 @@
 // @match               *://link.csdn.net/*
 // @match               *://link.zhihu.com/*
 // @match               *://gitee.com/*
+// @match               *://cloud.tencent.com/*
+// @match               *://www.jianshu.com/*
+// @match               *://blog.51cto.com/*
 // @grant               none
 // @run-at              document-end
 // ==/UserScript==
 (function () {
     'use strict';
-    // juejin.cn
     const url = new URL(location.href)
-    if(url.host === 'link.juejin.cn' || url.host === 'link.csdn.net' || url.host === 'link.zhihu.com' || url.host === 'gitee.com'){
-        if(url.searchParams.get('target')){
+    if (['link.juejin.cn', 'link.csdn.net', 'link.zhihu.com', 'gitee.com', 'cloud.tencent.com'].includes(url.host)) {
+        if (url.searchParams.get('target')) {
             location.href = decodeURIComponent(url.searchParams.get('target'))
         }
     }
-    // code
+    if (['www.jianshu.com'].includes(url.host)) {
+        if (url.searchParams.get('url')) {
+            location.href = decodeURIComponent(url.searchParams.get('url'))
+        }
+    }
+    if (['blog.51cto.com'].includes(url.host) && location.pathname === '/transfer') {
+        const target_url = url.href.split('?').slice(1).join('?')
+        if (target_url) {
+            location.href = decodeURIComponent(target_url)
+        }
+    }
+
 })();
