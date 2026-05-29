@@ -1,3 +1,15 @@
+# 1.1.0
+
+- 新增 `#/devtools` 远程调试页支持，日志来源于 WebSocket 实时数据（React fiber 树 / EventTarget 拦截缓存）。
+- 新增悬浮筛选面板在 `#/devtools` 下的支持（类型/级别/关键词过滤、复制、日志预览）。
+- 新增关键词双向同步：浮层面板 ↔ PageSpy 原生输入框。
+- 新增日志级别双向同步：浮层面板（多选） ↔ PageSpy Select 组件（单选）。
+- 新增工具栏"复制日志"按钮（`#/devtools`），读取当前筛选条件复制日志。
+- 新增面板显隐状态持久化：首次使用自动弹出，后续恢复上次状态。
+- 修复 `copyText` 行数统计不准确的问题（标题行/分隔空行导致多算）。
+- 优化日志级别按钮激活态视觉区分度（`border-color` + 提亮 `lv-log` 背景）。
+- 新增 `EventTarget.prototype.dispatchEvent` 拦截，缓存 PageSpy 分发的 console 事件。
+
 # 1.0.0
 
 - 浮动筛选面板（类型/级别/关键词），支持 GM_setClipboard 复制。
